@@ -4,6 +4,8 @@ import cors from "cors";
 import connectDb from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import errorHandler from "./middleware/errorMiddleware.js";
+import dns from "dns"
+ dns.setServers(["1.1.1.1","8.8.8.8"]);
 
 dotenv.config();
 connectDb();
